@@ -1,0 +1,357 @@
+// font-family: 'Post No Bills Jaffna', sans-serif;
+// font-family: 'Post No Bills Jaffna Light', sans-serif;
+// font-family: 'Post No Bills Jaffna Medium', sans-serif;
+// font-family: 'Post No Bills Jaffna SemiBold', sans-serif;
+// font-family: 'Post No Bills Jaffna ExtraBold', sans-serif;
+
+// font-family: 'PT Sans', sans-serif;
+// font-family: 'PT Sans Caption', sans-serif;
+// font-family: 'PT Sans Narrow', sans-serif;
+
+// font-family: 'Playfair Display', serif;
+
+// Design reference https://www.figma.com/file/LSA09uZa9v1B7z76EaKW87/Templates-%2317.-More-on-Figma.info-(Copy)
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.header {
+
+    &__container {
+        margin: 0 auto;
+        max-width: 1080px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .topbar {
+        color: gray;
+        font-size: 14px;
+
+        &__info {
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+
+            &-item {
+                
+                &:not(:first-child) {
+                    padding: 0 10px;
+                }
+                
+                &:not(:last-child) {
+                    border-right: 1px solid gray;
+                }
+            }
+        }
+    }
+
+    .bottombar {
+        background-color: #0F0F0F;
+    }
+
+    &__logo {
+        font: 36px 'Post No Bills Jaffna SemiBold';
+        text-transform: uppercase;
+    }
+
+    .menu {
+
+        &__list {
+            display: flex;
+        }
+
+        &__item {
+            text-transform: uppercase;
+        }
+
+        &__link {
+            padding: 40px 20px;
+            min-height: 22px;
+            display: block;
+            transition: background-color .5s;
+            box-sizing: content-box;
+
+            &--active,
+            &:hover {
+                background-color: #1F1F1F;
+            }
+        }
+    }
+
+    .phone-icon {
+        margin-right: 15px;
+    }
+
+    .auth-icon {
+        margin-right: 10px;
+    }
+}
+
+.hero {
+    min-height: 810px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../images/hero_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__logo {
+        margin-bottom: 80px;
+        height: 320px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        border: 4px solid #fff;
+
+        .text {
+            font: 64px 'Post No Bills Jaffna ExtraBold';
+            text-transform: uppercase;
+            line-height: 1;
+            border-bottom: 1px solid #fff;
+        }
+        
+        .city {
+            font-size: 22px;
+        }
+    }
+
+    &__description {
+        max-width: 730px;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 150%;
+    }
+}
+
+.collection {
+    display: flex;
+    font-family: 'Playfair Display', serif;
+
+    &__info {
+        padding: 90px 80px;
+        width: 55%;
+        text-align: center;
+
+        .gallery {
+            
+            &__wrap {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__img {
+                margin-bottom: 25px;
+                padding: 55px 20px;
+                background-color: #191B1C;
+            }
+            
+            &__model {
+                margin-bottom: 10px;
+                font-size: 18px;
+                text-align: left;
+            }
+
+            &__price {
+                text-align: left;
+            }
+        }
+
+        &-description {
+            margin: 0 auto 60px;
+            max-width: 470px;
+            line-height: 150%;
+        }
+    }
+
+    &__img {
+        width: 45%;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &--first {
+            background-image: url('../../images/new_collection_bg.jpg');
+        }
+
+        &--second {
+            background-image: url('../../images/collection_2018_bg.jpg');
+        }
+    }
+
+    .see-collection-btn {
+        margin: 0 auto;
+        padding: 12px 28px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+}
+
+.new {
+    padding: 120px 0 120px;
+
+    .gallery {
+        margin-bottom: 40px;
+        width: 23%;
+            
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__img {
+            margin-bottom: 25px;
+            padding: 55px 20px;
+            background-color: #191B1C;
+        }
+        
+        &__model {
+            margin-bottom: 10px;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        &__price {
+            text-align: left;
+        }
+    }
+}
+
+.brands {
+    padding: 60px 0 80px;
+    background-color: #0F0F0F;
+    
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .brand {
+
+        &__img {
+            max-width: 100%;
+        }
+    }
+}
+
+.footer {
+    padding: 80px 0 100px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../images/footer_bg.jpg');
+    font-size: 14px;
+
+    &__columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 30px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font: 24px 'Playfair Display', serif;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 150%;
+    }
+    
+    .category {
+        margin: 10px;
+        padding: 15px 20px;
+        background-color: #0F0F0F;
+
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    &__form {
+        margin-top: 40px;
+        display: flex;
+        font-size: 14px;
+
+        &-input {
+            padding: 10px;
+            height: 40px;
+            background-color: rgba(255,255,255,.4);
+            color: #fff;
+            border: none;
+
+            &::placeholder {
+                color: #fff;
+            }
+        }
+
+        &-btn {
+            padding: 10px 20px;
+            background-color: #0F0F0F;
+            color: #fff;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.copyright {
+    padding: 15px 0;
+    font-size: 12px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.title {
+    margin-bottom: 100px;
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+
+    &::after {
+        content: '';
+        height: 1px;
+        width: 120px;
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+    }
+}
